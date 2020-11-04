@@ -1,8 +1,5 @@
 let connection;
-const MESSAGE_HELLO = "Hello!";
-const MESSAGE_LAUGH = "Haha!";
-const MESSAGE_BYE = "So long!";
-const MESSAGE_SORRY = "Sorry!";
+const { MESSAGE_HELLO, MESSAGE_LAUGH, MESSAGE_BYE, MESSAGE_SORRY } = require('./constants');
 
 const setupInput = (conn) => {
   connection = conn;
