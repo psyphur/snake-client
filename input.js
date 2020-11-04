@@ -1,4 +1,8 @@
 let connection;
+const MESSAGE_HELLO = "Hello!";
+const MESSAGE_LAUGH = "Haha!";
+const MESSAGE_BYE = "So long!";
+const MESSAGE_SORRY = "Sorry!";
 
 const setupInput = (conn) => {
   connection = conn;
@@ -28,6 +32,18 @@ const handleUserInput = (key) => {
       break;
     case 'd':
       connection.write('Move: right');
+      break;
+    case '1':
+      connection.write(`Say: ${MESSAGE_HELLO}`);
+      break;
+    case '2':
+      connection.write(`Say: ${MESSAGE_LAUGH}`);
+      break;
+    case '3':
+      connection.write(`Say: ${MESSAGE_BYE}`);
+      break;
+    case '4':
+      connection.write(`Say: ${MESSAGE_SORRY}`);
       break;
     default:
       console.log("Not a valid input");
